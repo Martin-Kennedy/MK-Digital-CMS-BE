@@ -109,6 +109,10 @@ const projectFields  = {
             type: Text,
             isRequired: true
         },
+        resultFullText: {
+            type: Text,
+            isMultiline: true
+        },
         buttonColor: {
             type: Color,
         },
@@ -126,10 +130,6 @@ const projectFields  = {
         },
         imagePositionTop: {
             type: Integer
-        },
-        url: {
-            type: Slug,
-            from: 'client'
         },
         status: {
             type: Select,
