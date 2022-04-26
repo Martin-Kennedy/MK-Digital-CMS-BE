@@ -4,6 +4,7 @@ const {GraphQLApp} = require('@keystonejs/app-graphql');
 const {AdminUIApp} = require('@keystonejs/app-admin-ui');
 const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const {MongooseAdapter: Adapter} = require('@keystonejs/adapter-mongoose');
+const { StaticApp } = require('@keystonejs/app-static');
 const PROJECT_NAME = 'MK-Digital-CMS-BE';
 
 
@@ -15,6 +16,7 @@ const adapterConfig = {
 
 const ProjectSchema = require('./lists/Project');
 const UserSchema = require('./lists/User');
+const SurfAppJsonSchema = require('./lists/SurfAppStaticJson');
 
 const isAdmin = ({ authentication: { item: user } }) => {
   return !!user && user.isAdmin;
@@ -54,6 +56,16 @@ keystone.createList('User', {
   }
 });
 
+keystone.createList('SurfAppJsonUrl', {
+  fields: SurfAppJsonSchema.fields,
+  access: {
+    read: true,
+    create: isAdmin,
+    update: isAdmin,
+    delete: isAdmin
+  }
+});
+
 
 
 const authStrategy = keystone.createAuthStrategy({
@@ -75,6 +87,6 @@ module.exports = {
           enableDefaultRoute: true,
           authStrategy,
           isAccessAllowed: isLoggedIn
-})
+        }),
     ]
 };

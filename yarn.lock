@@ -1970,6 +1970,14 @@
     "graphql-upload" "^11.0.0"
     "nanoassert" "^2.0.0"
 
+"@keystonejs/app-static@^5.2.2":
+  "integrity" "sha512-dEyGw+9XWmTRg2H276lc6nFNdf1qt6XhjbN9QOPai4T1eD43aJTHKkDX0OOy0r2FS0gdxrUpLxwGACgMblNahA=="
+  "resolved" "https://registry.npmjs.org/@keystonejs/app-static/-/app-static-5.2.2.tgz"
+  "version" "5.2.2"
+  dependencies:
+    "express-history-api-fallback" "^2.2.1"
+    "fs-extra" "^9.1.0"
+
 "@keystonejs/app-version@^2.1.2":
   "integrity" "sha512-9adx9YhdlZJyrjzHoCnPgDzuELw9gUROfgUEXeR+Al8Kgl2tU0fBmv98dt1SMEFGJ3SECK/Ja+6aNwcbvxMpBw=="
   "resolved" "https://registry.npmjs.org/@keystonejs/app-version/-/app-version-2.1.2.tgz"
