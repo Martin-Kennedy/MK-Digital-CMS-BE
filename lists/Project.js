@@ -116,7 +116,7 @@ const projectFields  = {
         buttonColor: {
             type: Color,
         },
-        iphoneBackgroundColor: {
+        fiftyVwBkgColor: {
             type: Color,
         },
         cardColor: {

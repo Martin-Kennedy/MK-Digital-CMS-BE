@@ -28,6 +28,7 @@
     "@keystonejs/keystone": "^19.3.3",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
-    "graphql-upload": "^13.0.0"
+    "graphql-upload": "^11.0.0",
+    "temp-ks-app-graphql": "^1.0.0"
   }
 }

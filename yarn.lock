@@ -2177,7 +2177,7 @@
     "@keystonejs/session" "^8.3.2"
     "@keystonejs/utils" "^6.1.2"
     "apollo-errors" "^1.9.0"
-    "apollo-server-express" "^2.23.0"
+    "apollo-server-express" "3.6.7"
     "arg" "^5.0.0"
     "chalk" "^4.1.1"
     "ci-info" "^2.0.0"
@@ -3224,7 +3224,7 @@
   "resolved" "https://registry.npmjs.org/apollo-server-errors/-/apollo-server-errors-2.5.0.tgz"
   "version" "2.5.0"
 
-"apollo-server-express@^2.23.0":
+"apollo-server-express@3.6.7":
   "integrity" "sha512-tTFYn0oKH2qqLwVj7Ez2+MiKleXACODiGh5IxsB7VuYCPMAi9Yl8iUSlwTjQUvgCWfReZjnf0vFL2k5YhDlrtQ=="
   "resolved" "https://registry.npmjs.org/apollo-server-express/-/apollo-server-express-2.25.3.tgz"
   "version" "2.25.3"
@@ -5731,7 +5731,7 @@
     "inherits" "^2.0.1"
     "readable-stream" "^2.0.0"
 
-"fs-capacitor@^6.1.0", "fs-capacitor@^6.2.0":
+"fs-capacitor@^6.1.0":
   "integrity" "sha512-nKcE1UduoSKX27NSZlg879LdQc94OtbOsEmKMN2MBNudXREvijRKx2GEBsTMTfws+BrbkJoEuynbGSVRSpauvw=="
   "resolved" "https://registry.npmjs.org/fs-capacitor/-/fs-capacitor-6.2.0.tgz"
   "version" "6.2.0"
@@ -6054,22 +6054,12 @@
     "isobject" "^4.0.0"
     "object-path" "^0.11.4"
 
-"graphql-upload@^13.0.0":
-  "integrity" "sha512-YKhx8m/uOtKu4Y1UzBFJhbBGJTlk7k4CydlUUiNrtxnwZv0WigbRHP+DVhRNKt7u7DXOtcKZeYJlGtnMXvreXA=="
-  "resolved" "https://registry.npmjs.org/graphql-upload/-/graphql-upload-13.0.0.tgz"
-  "version" "13.0.0"
-  dependencies:
-    "busboy" "^0.3.1"
-    "fs-capacitor" "^6.2.0"
-    "http-errors" "^1.8.1"
-    "object-path" "^0.11.8"
-
 "graphql-ws@^5.4.1", "graphql-ws@^5.5.5":
   "integrity" "sha512-8yYuvnyqIjlJ/WfebOyu2GSOQeFauRxnfuTveY9yvrDGs2g3kR9Nv4gu40AKvRHbXlSJwTbMJ6dVxAtEyKwVRA=="
   "resolved" "https://registry.npmjs.org/graphql-ws/-/graphql-ws-5.7.0.tgz"
   "version" "5.7.0"
 
-"graphql@^0.10.5 || ^0.11.3 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^0.11.3 || ^0.12.3 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.12.0 || ^0.13.0 || ^14.0.0", "graphql@^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^14.0.0 || ^15.0.0", "graphql@^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^14.2.1 || ^15.0.0", "graphql@^14.2.1 || ^15.0.0 || ^16.0.0", "graphql@^15.0.0 || ^16.0.0", "graphql@^15.2.0 || ^16.0.0", "graphql@^15.4.0 || ^16.0.0", "graphql@^15.5.0", "graphql@^15.5.0 || ^16.0.0", "graphql@>=0.10.0", "graphql@>=0.11 <=16", "graphql@>=0.8.0", "graphql@0.13.1 - 15", "graphql@0.13.1 - 16", "graphql@14 - 15":
+"graphql@^0.10.5 || ^0.11.3 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^0.11.3 || ^0.12.3 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.12.0 || ^0.13.0 || ^14.0.0", "graphql@^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.13.0 || ^14.0.0 || ^15.0.0", "graphql@^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^14.0.0 || ^15.0.0", "graphql@^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^14.2.1 || ^15.0.0", "graphql@^14.2.1 || ^15.0.0 || ^16.0.0", "graphql@^15.0.0 || ^16.0.0", "graphql@^15.2.0 || ^16.0.0", "graphql@^15.4.0 || ^16.0.0", "graphql@^15.5.0", "graphql@^15.5.0 || ^16.0.0", "graphql@>=0.10.0", "graphql@>=0.11 <=16", "graphql@>=0.8.0", "graphql@0.13.1 - 15", "graphql@14 - 15":
   "integrity" "sha512-5gghUc24tP9HRznNpV2+FIoq3xKkj5dTQqf4v0CpdPbFVwFkWoxOM+o+2OC9ZSvjEMTjfmG9QT+gcvggTwW1zw=="
   "resolved" "https://registry.npmjs.org/graphql/-/graphql-15.8.0.tgz"
   "version" "15.8.0"
@@ -6280,7 +6270,7 @@
     "domutils" "^2.5.2"
     "entities" "^2.0.0"
 
-"http-errors@^1.7.3", "http-errors@^1.8.1", "http-errors@1.8.1":
+"http-errors@^1.7.3", "http-errors@1.8.1":
   "integrity" "sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g=="
   "resolved" "https://registry.npmjs.org/http-errors/-/http-errors-1.8.1.tgz"
   "version" "1.8.1"
@@ -7787,7 +7777,7 @@
   "resolved" "https://registry.npmjs.org/object-keys/-/object-keys-1.1.1.tgz"
   "version" "1.1.1"
 
-"object-path@^0.11.4", "object-path@^0.11.8":
+"object-path@^0.11.4":
   "integrity" "sha512-YJjNZrlXJFM42wTBn6zgOJVar9KFJvzx6sTWDte8sWZF//cnjl0BxHNpfZx+ZffXX63A9q0b1zsFiBX4g4X5KA=="
   "resolved" "https://registry.npmjs.org/object-path/-/object-path-0.11.8.tgz"
   "version" "0.11.8"
@@ -10185,6 +10175,18 @@
   "integrity" "sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg=="
   "resolved" "https://registry.npmjs.org/temp-dir/-/temp-dir-2.0.0.tgz"
   "version" "2.0.0"
+
+"temp-ks-app-graphql@^1.0.0":
+  "integrity" "sha512-wOqluvyL8c4fgJ07ZpkDHt8IrrFit7YJ9fYee6WJGMAWsouW24IAto0i91oSaylI4uqMN0H95NwePaO7Dng+Sg=="
+  "resolved" "https://registry.npmjs.org/temp-ks-app-graphql/-/temp-ks-app-graphql-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "@keystonejs/app-graphql-playground" "^5.2.2"
+    "@keystonejs/session" "^8.3.2"
+    "@keystonejs/utils" "^6.1.2"
+    "graphql" "^15.5.0"
+    "graphql-upload" "^11.0.0"
+    "nanoassert" "^2.0.0"
 
 "temp-write@^4.0.0":
   "integrity" "sha512-HIeWmj77uOOHb0QX7siN3OtwV3CTntquin6TNVg6SHOqCP3hYKmox90eeFOGaY1MqJ9WYDDjkyZrW6qS5AWpbw=="
