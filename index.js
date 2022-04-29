@@ -38,13 +38,13 @@ keystone.createList('Project', {
         read: true,
         create: isLoggedIn,
         update: isLoggedIn,
-        delete: isLoggedIn
+        delete: isLoggedIn,
     }
 });
 keystone.createList('User', {
     fields: UserSchema.fields,
     access: {
-        read: true,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -67,7 +67,6 @@ const authStrategy = keystone.createAuthStrategy({
     config: {
         identityField: 'email',
         secretField: 'password'
-
     }
 })
 
