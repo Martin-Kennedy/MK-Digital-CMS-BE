@@ -13,6 +13,7 @@ const adapterConfig = {
 const ProjectSchema = require('./lists/Project');
 const UserSchema = require('./lists/User');
 const SurfAppJsonSchema = require('./lists/SurfAppStaticJson');
+const BlogSchema = require('./lists/Blog');
 
 const isAdmin = ({
     authentication: {
@@ -35,7 +36,16 @@ const keystone = new Keystone({adapter: new Adapter(adapterConfig), cookieSecret
 keystone.createList('Project', {
     fields: ProjectSchema.fields,
     access: {
-        read: true,
+        read: isAdmin,
+        create: isLoggedIn,
+        update: isLoggedIn,
+        delete: isLoggedIn,
+    }
+});
+keystone.createList('Blog', {
+    fields: BlogSchema.fields,
+    access: {
+        read: isAdmin,
         create: isLoggedIn,
         update: isLoggedIn,
         delete: isLoggedIn,
@@ -54,7 +64,7 @@ keystone.createList('User', {
 keystone.createList('SurfAppJsonUrl', {
     fields: SurfAppJsonSchema.fields,
     access: {
-        read: true,
+        read: isAdmin,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
