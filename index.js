@@ -14,6 +14,7 @@ const ProjectSchema = require('./lists/Project');
 const UserSchema = require('./lists/User');
 const SurfAppJsonSchema = require('./lists/SurfAppStaticJson');
 const BlogSchema = require('./lists/Blog');
+const AboutSchema = require('./lists/About');
 
 const isAdmin = ({
     authentication: {
@@ -49,6 +50,15 @@ keystone.createList('Blog', {
         create: isLoggedIn,
         update: isLoggedIn,
         delete: isLoggedIn,
+    }
+});
+keystone.createList('About', {
+    fields: AboutSchema.fields,
+    access: {
+        read: isAdmin,
+        create: isAdmin,
+        update: isAdmin,
+        delete: isAdmin
     }
 });
 keystone.createList('User', {
