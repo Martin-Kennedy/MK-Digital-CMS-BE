@@ -1,6 +1,7 @@
 const { Text, Select, Url, DateTime, Slug, Integer, Relationship } = require('@keystonejs/fields');
 const { CloudinaryAdapter } = require('@keystonejs/file-adapters');
 const { CloudinaryImage } = require('@keystonejs/fields-cloudinary-image');
+const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
 const { Color } = require('@keystonejs/fields-color');
 
 const fileAdapter = new CloudinaryAdapter({
@@ -31,8 +32,7 @@ const blogFields = {
             isRequired: true
         },
         article: {
-            type: Text,
-            isMultiline: true,
+            type: Wysiwyg,
             isRequired: true
         },
         cardImage: {
@@ -40,11 +40,14 @@ const blogFields = {
             adapter: fileAdapter,
             isRequired: true,
         },
+        imageBkgColor: {
+            type: Color,
+        },
         mainImage: {
             type: CloudinaryImage,
             adapter: fileAdapter,
         },
-        launchDate: {
+        publishDate: {
             type: DateTime,
             format: 'dd/MM/yyyy HH:mm O',
             isRequired: true

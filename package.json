@@ -24,6 +24,7 @@
     "@keystonejs/auth-password": "^6.1.2",
     "@keystonejs/fields-cloudinary-image": "^2.2.2",
     "@keystonejs/fields-color": "^1.1.2",
+    "@keystonejs/fields-wysiwyg-tinymce": "^5.4.2",
     "@keystonejs/file-adapters": "^7.1.2",
     "@keystonejs/keystone": "^19.3.3",
     "cross-env": "^7.0.3",
