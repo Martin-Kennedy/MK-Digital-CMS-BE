@@ -1,15 +1,7 @@
 const { Text, Select, Url, DateTime, Slug, Integer, Relationship } = require('@keystonejs/fields');
-const { CloudinaryAdapter } = require('@keystonejs/file-adapters');
-const { CloudinaryImage } = require('@keystonejs/fields-cloudinary-image');
 const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
 const { Color } = require('@keystonejs/fields-color');
 
-const fileAdapter = new CloudinaryAdapter({
-    cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-    apiKey: process.env.CLOUDINARY_KEY,
-    apiSecret: process.env.CLOUDINARY_SECRET,
-    folder: 'MK-Digital-CMS',
-});
 
 const blogFields = {
     fields: {
