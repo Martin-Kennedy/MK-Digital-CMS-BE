@@ -3,7 +3,7 @@ const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
 const { Color } = require('@keystonejs/fields-color');
 
 
-const blogFields = {
+const aboutFields = {
     fields: {
         aboutHeroLineOne: {
             type: Text,
@@ -98,4 +98,4 @@ const blogFields = {
     }
 }
 
-module.exports = blogFields;
+module.exports = aboutFields;
