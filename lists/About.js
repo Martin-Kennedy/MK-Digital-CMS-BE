@@ -1,7 +1,5 @@
 const { Text, Select, Url, DateTime, Slug, Integer, Relationship } = require('@keystonejs/fields');
 const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
-const { Color } = require('@keystonejs/fields-color');
-
 
 const aboutFields = {
     fields: {

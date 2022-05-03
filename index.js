@@ -10,11 +10,14 @@ const adapterConfig = {
     mongoUri: process.env.MONGO_URI
 };
 
+const HomepageCarouselSchema = require('./lists/HomepageCarousel')
+const HomepageSchema = require('./lists/Homepage')
 const ProjectSchema = require('./lists/Project');
 const UserSchema = require('./lists/User');
 const SurfAppJsonSchema = require('./lists/SurfAppStaticJson');
 const BlogSchema = require('./lists/Blog');
 const AboutSchema = require('./lists/About');
+
 
 const isAdmin = ({
     authentication: {
@@ -34,10 +37,31 @@ const isLoggedIn = ({
 
 const keystone = new Keystone({adapter: new Adapter(adapterConfig), cookieSecret: process.env.COOKIE_SECRET});
 
-keystone.createList('Project', {
-    fields: ProjectSchema.fields,
+keystone.createList('HomepageCarousel', {
+    fields: HomepageCarouselSchema.fields,
     access: {
         read: isAdmin,
+        create: isAdmin,
+        update: isAdmin,
+        delete: isAdmin,
+    }
+});
+
+keystone.createList('Homepage', {
+    fields: HomepageSchema.fields,
+    access: {
+        read: isAdmin,
+        create: isAdmin,
+        update: isAdmin,
+        delete: isAdmin,
+    }
+});
+
+keystone.createList('Project', {
+    fields: ProjectSchema.fields,
+    labelField: 'client',
+    access: {
+        read: isLoggedIn,
         create: isLoggedIn,
         update: isLoggedIn,
         delete: isLoggedIn,
@@ -45,8 +69,9 @@ keystone.createList('Project', {
 });
 keystone.createList('Blog', {
     fields: BlogSchema.fields,
+    labelField: 'title',
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isLoggedIn,
         update: isLoggedIn,
         delete: isLoggedIn,
