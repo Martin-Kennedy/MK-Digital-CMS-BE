@@ -1,5 +1,6 @@
 const { Text, Select, Url, DateTime, Slug, Integer, Relationship } = require('@keystonejs/fields');
 const { Wysiwyg } = require('@keystonejs/fields-wysiwyg-tinymce');
+const { Color } = require('@keystonejs/fields-color');
 
 const homepageFields = {
     fields: {
@@ -12,6 +13,9 @@ const homepageFields = {
         },
         sectionOneLink: {
             type: Url,
+        },
+        sectionOneLinkColor: {
+            type: Color,
         },
         sectionTwoTitle: {
             type: Text,
@@ -48,6 +52,9 @@ const homepageFields = {
         },
         sectionFourLinkLabel: {
             type: Text,
+        },
+        sectionFourLinkColor: {
+            type: Color,
         },
         status: {
             type: Select,
