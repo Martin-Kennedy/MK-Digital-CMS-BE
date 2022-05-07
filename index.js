@@ -4,6 +4,8 @@ const { GraphQLApp } = require('temp-ks-app-graphql');
 const {AdminUIApp} = require('@keystonejs/app-admin-ui');
 const {PasswordAuthStrategy} = require('@keystonejs/auth-password');
 const {MongooseAdapter: Adapter} = require('@keystonejs/adapter-mongoose');
+const { singleton } = require('@keystonejs/list-plugins');
+
 const PROJECT_NAME = 'MK-Digital-CMS-BE';
 
 const adapterConfig = {
@@ -17,6 +19,7 @@ const UserSchema = require('./lists/User');
 const SurfAppJsonSchema = require('./lists/SurfAppStaticJson');
 const BlogSchema = require('./lists/Blog');
 const AboutSchema = require('./lists/About');
+
 
 
 const isAdmin = ({
@@ -39,6 +42,9 @@ const keystone = new Keystone({adapter: new Adapter(adapterConfig), cookieSecret
 
 keystone.createList('HomepageCarousel', {
     fields: HomepageCarouselSchema.fields,
+    plugins: [
+        singleton(),
+    ],
     access: {
         read: isAdmin,
         create: isAdmin,
@@ -49,6 +55,9 @@ keystone.createList('HomepageCarousel', {
 
 keystone.createList('Homepage', {
     fields: HomepageSchema.fields,
+    plugins: [
+        singleton(),
+    ],
     access: {
         read: isAdmin,
         create: isAdmin,
@@ -79,6 +88,9 @@ keystone.createList('Blog', {
 });
 keystone.createList('About', {
     fields: AboutSchema.fields,
+    plugins: [
+        singleton(),
+    ],
     access: {
         read: isAdmin,
         create: isAdmin,
@@ -98,6 +110,9 @@ keystone.createList('User', {
 
 keystone.createList('SurfAppJsonUrl', {
     fields: SurfAppJsonSchema.fields,
+    plugins: [
+        singleton(),
+    ],
     access: {
         read: isAdmin,
         create: isAdmin,
