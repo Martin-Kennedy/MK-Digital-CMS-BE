@@ -12,7 +12,7 @@ const homepageFields = {
             isMultiline: true,
         },
         sectionOneLink: {
-            type: Url,
+            type: Text,
         },
         sectionOneLinkColor: {
             type: Color,
@@ -48,7 +48,7 @@ const homepageFields = {
             isMultiline: true,
         },
         sectionFourLink: {
-            type: Url,
+            type: Text,
         },
         sectionFourLinkLabel: {
             type: Text,
