@@ -56,6 +56,22 @@ const homepageFields = {
         sectionFourLinkColor: {
             type: Color,
         },
+        sectionFiveTitle: {
+            type: Text,
+        },
+        sectionFiveBlurb: {
+            type: Text,
+            isMultiline: true
+        },
+        sectionFiveLink: {
+            type: Text,
+        },
+        sectionFiveLinkLabel: {
+            type: Text,
+        },
+        sectionFiveLinkColor: {
+            type: Color,
+        },
         status: {
             type: Select,
             options: [
