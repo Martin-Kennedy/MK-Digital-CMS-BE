@@ -19,6 +19,7 @@ const UserSchema = require('./lists/User');
 const SurfAppJsonSchema = require('./lists/SurfAppStaticJson');
 const BlogSchema = require('./lists/Blog');
 const AboutSchema = require('./lists/About');
+const ContactSchema = require('./lists/contact');
 
 
 
@@ -88,6 +89,18 @@ keystone.createList('Blog', {
 });
 keystone.createList('About', {
     fields: AboutSchema.fields,
+    plugins: [
+        singleton(),
+    ],
+    access: {
+        read: isAdmin,
+        create: isAdmin,
+        update: isAdmin,
+        delete: isAdmin
+    }
+});
+keystone.createList('Contact', {
+    fields: ContactSchema.fields,
     plugins: [
         singleton(),
     ],
