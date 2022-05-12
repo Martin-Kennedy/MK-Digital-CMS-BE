@@ -77,6 +77,9 @@ const projectFields  = {
         youtubeEmbedCode: {
             type: Text,
         },
+        videoEmbedUrl: {
+            type: Url,
+        },
         youtubeListCode: {
             type: Text,
         },

@@ -74,10 +74,7 @@ const aboutFields = {
             type: Wysiwyg,
         },
         parallaxVideoEmbed: {
-            type: Text,
-        },
-        parallaxVideoPlaylist: {
-            type: Text,
+            type: Url,
         },
         status: {
             type: Select,
