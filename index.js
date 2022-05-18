@@ -21,6 +21,7 @@ const BlogSchema = require('./lists/Blog');
 const AboutSchema = require('./lists/About');
 const ContactSchema = require('./lists/Contact');
 const ProjectLandingSchema = require('./lists/ProjectLanding')
+const BlogLandingSchema = require('./lists/ProjectLanding');
 
 
 
@@ -114,6 +115,18 @@ keystone.createList('Contact', {
 });
 keystone.createList('ProjectLanding', {
     fields: ProjectLandingSchema.fields,
+    plugins: [
+        singleton(),
+    ],
+    access: {
+        read: isAdmin,
+        create: isAdmin,
+        update: isAdmin,
+        delete: isAdmin
+    }
+});
+keystone.createList('BlogLanding', {
+    fields: BlogLandingSchema.fields,
     plugins: [
         singleton(),
     ],
