@@ -5,9 +5,6 @@ const projectLandingFields = {
         h1: {
             type: Text,
         },
-        paragraphLineOne: {
-            type: Text,
-        },
         paragraph: {
             type: Text,
             isMultiline: true,
