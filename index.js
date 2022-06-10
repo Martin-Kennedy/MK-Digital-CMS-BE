@@ -5,6 +5,8 @@ const {AdminUIApp} = require('@keystonejs/app-admin-ui');
 const {PasswordAuthStrategy} = require('@keystonejs/auth-password');
 const {MongooseAdapter: Adapter} = require('@keystonejs/adapter-mongoose');
 const { singleton } = require('@keystonejs/list-plugins');
+const expressSession = require('express-session');
+const MongoStore = require('connect-mongo')(expressSession);
 
 const PROJECT_NAME = 'MK-Digital-CMS-BE';
 
@@ -46,6 +48,7 @@ const keystone = new Keystone({
     cookie: {
         secure: false,
     },
+    sessionStore: new MongoStore({ url: process.env.MONGO_URI }),
     cookieSecret: process.env.COOKIE_SECRET
 });
 
