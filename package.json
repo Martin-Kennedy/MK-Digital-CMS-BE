@@ -4,8 +4,8 @@
   "private": true,
   "version": "5.0.21",
   "author": "The KeystoneJS Development Team",
-  "repository": "https://github.com/keystonejs/keystone-5/tree/main/packages/create-keystone-5-app/example-projects/blank",
-  "homepage": "https://github.com/keystonejs/keystone-5",
+  "repository": "https://git.heroku.com/mk-digital-cms.git",
+  "homepage": "https://mk-digital-cms.herokuapp.com/",
   "license": "MIT",
   "engines": {
     "node": "16.x"
