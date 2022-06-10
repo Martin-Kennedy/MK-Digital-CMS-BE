@@ -44,7 +44,7 @@ const isLoggedIn = ({
 const keystone = new Keystone({
     adapter: new Adapter(adapterConfig),
     cookie: {
-        secure: true,
+        secure: false,
     },
     cookieSecret: process.env.COOKIE_SECRET
 });
