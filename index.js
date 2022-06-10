@@ -41,7 +41,13 @@ const isLoggedIn = ({
     return !!user;
 }
 
-const keystone = new Keystone({adapter: new Adapter(adapterConfig), cookieSecret: process.env.COOKIE_SECRET});
+const keystone = new Keystone({
+    adapter: new Adapter(adapterConfig),
+    cookie: {
+        secure: true,
+    },
+    cookieSecret: process.env.COOKIE_SECRET
+});
 
 keystone.createList('HomepageCarousel', {
     fields: HomepageCarouselSchema.fields,
