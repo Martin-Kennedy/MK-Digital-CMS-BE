@@ -190,5 +190,8 @@ module.exports = {
             hooks: require.resolve('./adminHooks/hooks.js'),
             isAccessAllowed: isLoggedIn
         })
-    ]
+    ],
+    configureExpress: app => {
+        app.set('trust proxy', 1);
+    }
 };
