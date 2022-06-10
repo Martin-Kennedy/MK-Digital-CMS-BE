@@ -192,6 +192,6 @@ module.exports = {
         })
     ],
     configureExpress: app => {
-        app.set('trust proxy', 1);
+        app.set('trust proxy', true);
     }
 };
