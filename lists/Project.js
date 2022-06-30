@@ -97,20 +97,16 @@ const projectFields  = {
         },
        
         resultMetric1Description: {
-            type: Text,
-            isRequired: true
+            type: Text
         },
         resultMetric1Value: {
-            type: Text,
-            isRequired: true
+            type: Text
         }, 
         resultMetric2Description: {
-            type: Text,
-            isRequired: true
+            type: Text
         },
         resultMetric2Value: {
-            type: Text,
-            isRequired: true
+            type: Text
         },
         resultFullText: {
             type: Text,
