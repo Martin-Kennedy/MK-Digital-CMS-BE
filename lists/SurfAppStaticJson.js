@@ -10,7 +10,17 @@ const surfAppJsonEndpointFields = {
         },
         tideAndCurrentsApiData: {
             type: Url
+        },
+        surfSpotApi: {
+            type: Url
+        },
+        urlProxy: {
+            type: Url
+        },
+        tidesAndCurrentsUrl: {
+            type: Url
         }
+
     }
 }
 
