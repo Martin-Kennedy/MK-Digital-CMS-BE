@@ -59,7 +59,7 @@ keystone.createList('HomepageCarousel', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin,
@@ -72,7 +72,7 @@ keystone.createList('Homepage', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin,
@@ -105,7 +105,7 @@ keystone.createList('About', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -117,7 +117,7 @@ keystone.createList('Contact', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -129,7 +129,7 @@ keystone.createList('ProjectLanding', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -141,7 +141,7 @@ keystone.createList('BlogLanding', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -163,7 +163,7 @@ keystone.createList('SurfAppJsonUrl', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
