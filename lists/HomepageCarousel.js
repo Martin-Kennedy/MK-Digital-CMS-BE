@@ -27,6 +27,10 @@ const homepageCarouselFields = {
             isMany: false,
             dependsOn: {listType: 'PROJECT'},
         },
+
+        description: {
+            type: Text,
+        },
         
         blogTitle: {
             type: Relationship,
