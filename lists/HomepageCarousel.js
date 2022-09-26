@@ -27,8 +27,15 @@ const homepageCarouselFields = {
             isMany: false,
             dependsOn: {listType: 'PROJECT'},
         },
+        textTranslation: {
+            type: Text,
+        },
 
         description: {
+            type: Text,
+        },
+
+        linkText: {
             type: Text,
         },
         
@@ -49,9 +56,7 @@ const homepageCarouselFields = {
         order: {
             type: Integer,
         },
-        textTranslation: {
-            type: Text,
-        },
+       
         status: {
             type: Select,
             options: [
