@@ -25,6 +25,7 @@ const AboutSchema = require('./lists/About');
 const ContactSchema = require('./lists/Contact');
 const ProjectLandingSchema = require('./lists/ProjectLanding')
 const BlogLandingSchema = require('./lists/ProjectLanding');
+const SurferSchema = require('./lists/Surfer');
 
 
 
@@ -59,7 +60,7 @@ keystone.createList('HomepageCarousel', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin,
@@ -72,7 +73,7 @@ keystone.createList('Homepage', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin,
@@ -105,7 +106,7 @@ keystone.createList('About', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -117,7 +118,7 @@ keystone.createList('Contact', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -129,7 +130,7 @@ keystone.createList('ProjectLanding', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -141,7 +142,7 @@ keystone.createList('BlogLanding', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
@@ -163,10 +164,21 @@ keystone.createList('SurfAppJsonUrl', {
         singleton(),
     ],
     access: {
-        read: isAdmin,
+        read: isLoggedIn,
         create: isAdmin,
         update: isAdmin,
         delete: isAdmin
+    }
+});
+
+
+keystone.createList('Surfer', {
+    fields: SurferSchema.fields,
+    access: {
+        read: isLoggedIn, 
+        create: isLoggedIn,
+        update: isLoggedIn,
+        delete: isLoggedIn
     }
 });
 
@@ -184,7 +196,7 @@ module.exports = {
     apps: [
         new GraphQLApp({
             apollo: {
-                maxFiles: 10
+                maxFiles: 20
             }
         }),
         new AdminUIApp({
