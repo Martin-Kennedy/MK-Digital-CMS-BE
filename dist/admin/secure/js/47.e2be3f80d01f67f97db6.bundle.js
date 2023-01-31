@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[47],{736:function(o,n,e){"use strict";e.r(n);var s=e(0),a=e.n(s);n.default={logo:function(){console.log("Logo hooks loaded")},pages:function(){return console.log("Pages hooks loaded"),window.React=a.a,[]}}}}]);
